@@ -8,8 +8,8 @@ import requests
 
 url = "https://drive.google.com/file/d/1VNnKhgB0xNdVq4qL6HbaWvAXIT0h1Gsb/view?usp=sharing"
 response = requests.get(url)
-with open("similarity1.pkl", "rb") as similarity:
-     similarity= pickle.load(similarity)
+with open("similarity1.pkl", "rb") as similarity1:
+     similarity= pickle.load(similarity1)
 movies_title= movies_df['name'].values
 def recommend(movie):
     movie_index = movies_df[movies_df['name'] == movie].index[0]
